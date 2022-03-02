@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Computer page </title>
+    </head>
+<body>
+
+<h2>Sasank Srinivas Nadendla orders a computer</h2>
+<form>
+    <input type="checkbox" id="ExtraMemory" name="ExtraMemory"   
+    value="extra" checked>
+  <label for="ExtraMemory">Extra memory</label></br>
+
+  <input type="checkbox" id="Mouse" name="Mouse" 
+     value="mouse" checked>
+  <label for="Mouse">Mouse</label></br>
+
+  <input type="checkbox" id="cellService" name="cellService"   
+     value="cell" checked>
+  <label for="cellService">Cell service</label></br>
+
+  <input type="button" onclick="orderComputer()" value="Order a Computer">
+</form>
+<p id="result"></p>
+  <br>
+  <form>
+    <label for="propertyname">Enter a property name </label>
+    <input type ="text" id="propertyname" name="propertyname" min=10 max=50 step=2 value="engraved"> <br><br>
+
+    <label for="propertyvalue">Enter a value</label>
+    <input type ="text" id="propertyvalue" name="propertyvalue" autofocus > <br> <br>
+
+    <input type="button" onclick="updateComputer()" value="Update the computer">
+</form>
+<p id="result"></p>
+<br>
+  <script>
+      function orderComputer(){
+
+       extra=document.getElementById("extraMemory").checked
+       mouse = document.getElementById("Mouse").checked
+       cell = document.getElementById("cellService").checked
+
+      if(extra)Mycmp["extra"]=true
+      elseMycmp["extra"]=false
+      if(mouse)Mycmp["Mouse"]=true
+      elseMycmp["Mouse"]=false
+      if(cell)Mycmp["cell"]=true
+      elseMycmp["cell"]=false
+
+    document.getElementById("results").innerHTML="<b>Extra Money:</b>"+Mycmp.extra+", <b>Mouse:</b>"+Mycmp.Mouse+", <b>Cell Service:</b>"+Mycmp.cell
+}
+    var Mycmp={}
+    
+    function updateComputer(){
+        var ss=document.getElementById("propertyname").value
+        var yy=document.getElementById("propertyvalue").value
+        Mycmp[ss]=yy
+        document.getElementById("result").innerHTML=ss+":"+yy+" <b>Successfully added</b>"
+        console.log(Mycmp)
+    }
+    </script>
+
+</body>
+</html> 

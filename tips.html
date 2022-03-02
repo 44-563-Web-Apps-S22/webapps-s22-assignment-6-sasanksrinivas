@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
- 
+    <head>
+        <title> Tips Page </title>
+    </head>
 <body>
 
 <h2>Sasank Srinivas Nadendla computes tips</h2> 
@@ -53,14 +55,14 @@
     </script>
     <script> 
         function tips(){
-            var amountnumber=(Number)(document.getElementById("form_one").value)
-            var vaiabletip=(Number)(document.getElementById("form_two").value)
-            result="Tip amounts by increase of "+vaiabletip+" are: "
+            var amnt=(Number)(document.getElementById("form_one").value)
+            var tipinc=(Number)(document.getElementById("form_two").value)
+            result="Tip amounts by increase of "+tipinc+" are: "
          
-            var sum=amountnumber*0.1
+            var sum=amnt*0.1
             result+=sum+0.0
             for(let i=0;i<9;i++){
-             var sasa=sum +(amountnumber*vaiabletip);
+             var sasa=sum +(amnt*tipinc);
              result += " "+Math.round(sasa * 10) / 10
              sum=Math.round(sasa * 10) / 10
         }
