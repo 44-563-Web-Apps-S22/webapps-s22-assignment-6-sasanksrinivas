@@ -40,6 +40,40 @@
             }
         }
     </script>
+    <div>
+        <img src="001.jpg" id="bird_img" width="100" height="100" onclick="swapImage()">
+    </div>
+    <script>
+    var picture=1
+    function swapImage()
+    {
+        switch(picture)
+        {
+           case 1:
+           {
+              document.getElementById("bird_img").src="003.jpg"
+              picture=2
+              break
+           }
+    
+           case 2:
+           {
+              document.getElementById("bird_img").src="002.jpg"
+              picture=3
+              break
+           }
+           
+           case 3:
+           {
+              
+              document.getElementById("bird_img").src="001.jpg"
+              picture=1
+              break
+           }
+        }
+    }
+    
+    </script>
 
 </body>
 
